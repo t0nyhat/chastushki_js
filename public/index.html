@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+
+      button {
+        background: transparent;
+        width: 100px;
+        height: 50px;
+        font-size: medium;
+        border-radius: 4px;
+        margin-bottom: 50px;
+      }
+
+      section {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      audio {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <button id="stop">listen</button>
+      <p id="status"></p>
+      <p id="text"></p>
+      <audio id="audio" controls></audio>
+    </section>
+  </body>
+
+  <script>
+    let listenButton = document.getElementById("stop");
+    let textBlock = document.getElementById("text");
+    let audioBlock = document.getElementById("audio");
+
+    listenButton.addEventListener("click", () => {
+      fetch("/api/speech", {
+        method: "post",
+        body: JSON.stringify({
+          text:
+            "Однажды, в студеную зимнюю пору,Я из лесу вышел; был сильный мороз.Гляжу, поднимается медленно в горуЛошадка, везущая хворосту воз.",
+        }),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.blob())
+        .then((result) => {
+          audioBlock.src = URL.createObjectURL(result);
+          audioBlock.play();
+        });
+    });
+  </script>
+</html>
