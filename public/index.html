@@ -33,28 +33,82 @@
       audio {
         display: none;
       }
+      /*
+Форма обратной связи
+*/
+#inline {
+   margin-left:30px;
+   margin:0 auto;
+   background:#FFF;
+   padding:10px 20px;
+   height: 300px;
+}
+.txtarea {
+  display: inline-block;
+    color: #676767;
+    width: 617px;
+    margin-bottom: 10px;
+    border: 1px solid #CCC;
+    padding: 5px 9px;
+    font-size: 15px!important;
+    line-height: 1.4em;
+    height: 100%;
+}
+.txtarea:focus {
+   border-style:solid;
+   border-color:#BABABA;
+   color:#444;
+}
+input.error, textarea.error {
+    border-color:#973D3D;
+    border-style:solid;
+    background:#F0BEBE;
+    color:#A35959;
+}
+input.error:focus, textarea.error:focus {
+    border-color:#973D3D;
+    color:#A35959;
+}
+#stop {
+    color:#FFFFFF;
+    display:block;
+    cursor:pointer;
+    padding:5px 11px;
+    font-size:1.2em;
+    border:solid 1px #F9F9F9;
+    border-radius:2px;
+    background:#70C6B9;
+    width:210px;
+    margin-bottom:20px;
+}
+#send:hover {
+    background:#979797;
+}
+/*
+Форма обратной связи
+*/
     </style>
   </head>
   <body>
-    <section>
-      <button id="stop">listen</button>
-      <p id="status"></p>
-      <p id="text"></p>
+    <div id="inline">
       <audio id="audio" controls></audio>
-    </section>
+      <h2>Введите текст частушки!</h2>
+      <textarea id="msg" class="txtarea" name="msg" placeholder="Ваша частушка:"></textarea>
+      <button id="stop">Слушать</button>
+      </form>
+      </div>
   </body>
 
   <script>
     let listenButton = document.getElementById("stop");
-    let textBlock = document.getElementById("text");
+    let textBlock = document.getElementById("msg");
     let audioBlock = document.getElementById("audio");
 
     listenButton.addEventListener("click", () => {
       fetch("/api/speech", {
         method: "post",
         body: JSON.stringify({
-          text:
-            "Однажды, в студеную зимнюю пору,Я из лесу вышел; был сильный мороз.Гляжу, поднимается медленно в горуЛошадка, везущая хворосту воз.",
+          text: textBlock.value,
         }),
         headers: {
           Accept: "application/json",
