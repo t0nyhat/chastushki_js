@@ -51,5 +51,5 @@ npm run dev
 npm run start
 ```
 ### TODO
-- Дорабоатть api
-- Дорабоать front
+- Доработать api
+- Доработать front
