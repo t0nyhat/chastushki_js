@@ -5,12 +5,11 @@
 ### За авторизацию спасибо [RomanFadeev26](https://github.com/RomanFadeev26)
 ### За Wav-header спасибо [zx-kapok](https://github.com/zx-kapok)
 
-#### Backend развернут по IP- адресу ? [тут](https://?/)
-#### Также доступен на домене [https://chastushki.tonyhat.site/](https://chastushki.tonyhat.site/)
-#### Фронт доступен по адресу [https://chastushki.tonyhat.site/](https://chastushki.tonyhat.site/)
-#### Фронт доступен по адресу [https://chastushki.tonyhat.site/](https://chastushki.tonyhat.site/)
+#### Backend развернут по IP- адресу [пока не развернут](https://)
+#### Фронт доступен по адресу [пока не развернут](https://)
+
   
-### Функционал:
+## Функционал:
 ```
 POST /api/speech - регистрация нового пользователя
  формат:
@@ -27,7 +26,7 @@ POST /api/speech - регистрация нового пользователя
 
 Сохраните проект у себя на компьютере:
 ```
-git clone ?
+git clone https://github.com/t0nyhat/chastushki_js.git
 ```
 
 В корне проекта через консоль/терминал запустите команду:
@@ -42,7 +41,7 @@ KEY_ID = 'свой'
 ISS = 'свой'
 ``` 
 
-#### Доступные команды:  
+## Доступные команды:  
 Запуск локального сервера с хот релоудом:  
 ```
 npm run dev
@@ -51,4 +50,6 @@ npm run dev
 ```
 npm run start
 ```
-
+### TODO
+- Дорабоатть api
+- Дорабоать front
