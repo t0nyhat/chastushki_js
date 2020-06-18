@@ -1,16 +1,5 @@
-const mongoose = require('mongoose');
-
 const errorHandler = (err, req, res, next) => {
-  const { code } = err;
-  let { statusCode = 500, message } = err;
-
-  if (err instanceof mongoose.Error.ValidationError || err instanceof mongoose.Error.CastError) {
-    statusCode = 400;
-  }
-  if (code === 11000) {
-    statusCode = 409;
-    message = 'Данный email уже используется';
-  }
+  const { statusCode = 500, message } = err;
 
   res
     .status(statusCode)
