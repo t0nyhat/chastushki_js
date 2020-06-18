@@ -5,7 +5,7 @@ const { createDitty } = require('../lib/createDitty');
 function textToSpeech(req, res, next) {
   let { text } = req.body;
   if (text.length > 150) {
-    text = 'Очень много букв';
+    text = 'Очень много букв ';
   }
 
   fetchIamToken().then((token) => {
