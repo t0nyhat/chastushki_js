@@ -1,6 +1,6 @@
 {
   "name": "chastushki_js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "chastushki app using Yandex SpeechKit (приложения, которое генериркет частушки с помощью Yandex SpeechKit)",
   "main": "app.js",
   "scripts": {
@@ -35,9 +35,7 @@
     "nodemon": "^2.0.3"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "celebrate": "^12.1.1",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -45,11 +43,8 @@
     "express-winston": "^4.0.3",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.14",
-    "mongoose-validator": "^2.1.0",
     "node-jose": "^1.1.4",
     "superagent": "^5.2.2",
-    "validator": "^13.1.1",
     "winston": "^3.2.1"
   }
 }
