@@ -5,8 +5,10 @@
 ### За авторизацию спасибо [RomanFadeev26](https://github.com/RomanFadeev26)
 ### За Wav-header спасибо [zx-kapok](https://github.com/zx-kapok)
 
-#### Backend развернут по IP- адресу [пока не развернут](https://)
-#### Фронт доступен по адресу [пока не развернут](https://)
+#### Backend развернут по IP- адресу [https://chastushki.tonyhat.site/api/speech](https://chastushki.tonyhat.site/api/speech)
+#### Фронт доступен по адресу [https://chastushki.tonyhat.site](https://chastushki.tonyhat.site)
+
+#### v2.0.1
 
   
 ## Функционал:
