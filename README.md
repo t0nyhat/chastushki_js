@@ -8,7 +8,7 @@
 #### Backend развернут по IP- адресу [https://chastushki.tonyhat.site/api/speech](https://chastushki.tonyhat.site/api/speech)
 #### Фронт доступен по адресу [https://chastushki.tonyhat.site](https://chastushki.tonyhat.site)
 
-#### v2.0.1
+#### v2.0.2
 
   
 ## Функционал:
@@ -38,9 +38,9 @@ npm install
 Добавляем свой .env файл
 В него заносим 
 ``` 
-FOLDER_ID = 'свой'
-KEY_ID = 'свой'
-ISS = 'свой'
+API_KEY = 'свой'
+
+Создать сервисный аккаунт, генерировать урощенный API_KEY.
 ``` 
 
 ## Доступные команды:  

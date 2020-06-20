@@ -1,10 +1,10 @@
 const errorHandler = (err, req, res, next) => {
-  const { statusCode = 500, message } = err;
+  const { status = 500, message } = err;
 
   res
-    .status(statusCode)
+    .status(status)
     .send({
-      message: statusCode === 500
+      message: status === 500
         ? 'На сервере произошла ошибка'
         : message,
     });
