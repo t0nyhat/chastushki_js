@@ -2,7 +2,6 @@
 
 ### Попытка с помощью SpeechKit автоматически генерировать частушки ))
 ### Вдохновился [https://twitter.com/chastushkibot](https://twitter.com/chastushkibot)
-### За авторизацию спасибо [RomanFadeev26](https://github.com/RomanFadeev26)
 ### За Wav-header спасибо [zx-kapok](https://github.com/zx-kapok)
 
 #### Backend развернут по IP- адресу [https://chastushki.tonyhat.site/api/speech](https://chastushki.tonyhat.site/api/speech)
