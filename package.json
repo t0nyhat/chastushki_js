@@ -1,7 +1,7 @@
 {
   "name": "chastushki_js",
-  "version": "2.0.1",
-  "description": "chastushki app using Yandex SpeechKit (приложения, которое генериркет частушки с помощью Yandex SpeechKit)",
+  "version": "2.0.2",
+  "description": "chastushki app using Yandex SpeechKit (приложения, которое генерирует частушки с помощью Yandex SpeechKit)",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
