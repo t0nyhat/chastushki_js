@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 
-const { API_KEY } = process.env;
+const { API_KEY, TLG_TOKEN, TLG_USER_ID } = process.env;
 const START_PCM_SOURCE = fs.readFileSync(path.resolve(__dirname, '../sound/start.pcm'));
 const END_PCM_SOURCE = fs.readFileSync(path.resolve(__dirname, '../sound/end.pcm'));
 const MIDDLE_PCM_SOURCE = fs.readFileSync(path.resolve(__dirname, '../sound/middle.pcm'));
@@ -30,4 +30,6 @@ module.exports = {
   END_PCM,
   MIDDLE_PCM,
   API_KEY,
+  TLG_TOKEN,
+  TLG_USER_ID,
 };
