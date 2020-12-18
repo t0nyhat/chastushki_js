@@ -1,6 +1,6 @@
 {
   "name": "chastushki_js",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "chastushki app using Yandex SpeechKit (приложения, которое генерирует частушки с помощью Yandex SpeechKit)",
   "main": "app.js",
   "scripts": {
@@ -45,6 +45,7 @@
     "jsonwebtoken": "^8.5.1",
     "node-jose": "^2.0.0",
     "superagent": "^6.1.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "node-telegram-bot-api": "^0.50.0"
   }
 }

@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { errorHandler } = require('./middlewares/errorHandler');
+const { sendMesssage } = require('./middlewares/bot');
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -25,6 +26,7 @@ const error = (req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
+app.use(sendMesssage);
 
 app.use(cookieParser());
 app.use(express.static('public'));
@@ -36,5 +38,5 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.info(`App in port ${PORT}`);
+  console.info(`App in localhost:${PORT}`);
 });

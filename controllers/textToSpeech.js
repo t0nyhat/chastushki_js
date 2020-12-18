@@ -3,7 +3,12 @@ const { API_KEY } = require('../consts/consts');
 const { createDitty } = require('../lib/createDitty');
 
 function textToSpeech(req, res, next) {
-  let { text } = req.body;
+  let {
+    text,
+  } = req.body;
+  const {
+    speed, voice, emotion,
+  } = req.body;
   if (text.length > 150) {
     text = 'Очень много букв ';
   }
@@ -11,7 +16,12 @@ function textToSpeech(req, res, next) {
   superagent
     .post('https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize')
     .query({
-      text, voice: 'alyss', format: 'lpcm', sampleRateHertz: 48000,
+      text,
+      voice,
+      format: 'lpcm',
+      sampleRateHertz: 48000,
+      emotion,
+      speed,
     })
     .set('Authorization', `Api-Key ${API_KEY}`)
     .then((result) => {
