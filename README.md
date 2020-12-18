@@ -1,6 +1,6 @@
 # Частушки с использованием Yandex SpeechKit
 ## Макет: 
-![макет](https://github.com/t0nyhat/chastushki_js/blob/master/images/main.png)
+![макет](https://github.com/t0nyhat/chastushki_js/blob/master/images/main.png?raw=true)
 
 ### Попытка с помощью SpeechKit автоматически генерировать частушки ))
 ### Вдохновился [https://twitter.com/chastushkibot](https://twitter.com/chastushkibot)
