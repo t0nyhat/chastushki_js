@@ -1,4 +1,10 @@
 # Частушки с использованием Yandex SpeechKit
+<p align="center">
+  <a aria-label="Build status" href="https://www.travis-ci.com/t0nyhat/chastushki_js">
+    <img alt="Build status" src="https://www.travis-ci.com/t0nyhat/chastushki_js.svg?branch=master">
+  </a>
+</p>
+
 ## Макет: 
 ![макет](https://github.com/t0nyhat/chastushki_js/blob/master/images/main.png?raw=true)
 
