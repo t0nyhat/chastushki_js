@@ -9,7 +9,7 @@
 #### Backend развернут по IP- адресу [https://chastushki.tonyhat.site/api/speech](https://chastushki.tonyhat.site/api/speech)
 #### Фронт доступен по адресу [https://chastushki.tonyhat.site](https://chastushki.tonyhat.site)
 
-#### v2.1.0
+#### v2.1.1
 
   
 ## Функционал:
