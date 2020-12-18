@@ -41,7 +41,7 @@
     "express": "^4.17.1",
     "express-rate-limit": "^5.2.3",
     "express-winston": "^4.0.3",
-    "helmet": "^3.22.0",
+    "helmet": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
     "node-jose": "^1.1.4",
     "superagent": "^5.2.2",
