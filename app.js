@@ -11,10 +11,22 @@ const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 50,
 });
-const { PORT = 3001 } = process.env;
 
 const app = express();
+
 app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      'default-src': ["'self'","* blob:"],
+      'style-src':["'self'","'unsafe-inline'"],
+      'base-uri': ["'self'"],
+      'media-src': ["* blob:"],
+      'img-src': ["'self'","* data:"],
+      'script-src': ["'self'",'https://mc.yandex.ru']
+    },
+  }),
+);
 
 app.use(limiter);
 
@@ -36,7 +48,4 @@ app.use(errorLogger);
 app.use('*', error);
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.info(`App in localhost:${PORT}`);
-});
+module.exports = app;
