@@ -49,6 +49,6 @@
     "node-jose": "^2.0.0",
     "superagent": "^6.1.0",
     "winston": "^3.3.3",
-    "node-telegram-bot-api": "^0.50.0"
+    "node-telegram-bot-api": "^0.51.0"
   }
 }
