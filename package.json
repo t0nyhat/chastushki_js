@@ -47,8 +47,8 @@
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
     "node-jose": "^2.0.0",
+    "node-telegram-bot-api": "^0.53.0",
     "superagent": "^6.1.0",
-    "winston": "^3.3.3",
-    "node-telegram-bot-api": "^0.53.0"
+    "winston": "^3.3.3"
   }
 }
