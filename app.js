@@ -1,8 +1,10 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const { DATABASE_URL } = require('./config/config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { errorHandler } = require('./middlewares/errorHandler');
 // const { sendMesssage } = require('./middlewares/bot');
@@ -20,6 +22,12 @@ const app = express();
 //   ],
 //   credentials: true,
 // };
+mongoose.connect(DATABASE_URL, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true,
+});
 app.use(cors());
 
 app.use(helmet());

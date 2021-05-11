@@ -7,9 +7,9 @@ function textToSpeech(req, res, next) {
     text,
   } = req.body;
   const {
-    speed, voice, emotion,
+    speed, voice, emotion, lang,
   } = req.body;
-  if (text.length > 150) {
+  if (text.length > 200) {
     text = 'Очень много букв ';
   }
 
@@ -22,6 +22,7 @@ function textToSpeech(req, res, next) {
       sampleRateHertz: 48000,
       emotion,
       speed,
+      lang,
     })
     .set('Authorization', `Api-Key ${API_KEY}`)
     .then((result) => {

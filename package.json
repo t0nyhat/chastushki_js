@@ -47,6 +47,7 @@
     "express-winston": "^4.1.0",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.8",
     "node-jose": "^2.0.0",
     "node-telegram-bot-api": "^0.53.0",
     "superagent": "^6.1.0",
