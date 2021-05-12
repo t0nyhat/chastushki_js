@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const { errors } = require('celebrate');
 const { DATABASE_URL } = require('./config/config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { errorHandler } = require('./middlewares/errorHandler');
@@ -14,13 +15,7 @@ const limiter = rateLimit({
   max: 50,
 });
 const app = express();
-// const corsOptions = {
-//   origin: [
-//       'http://localhost:8080',
-//       'http://newsapp.ga/'
-//   ],
-//   credentials: true,
-// };
+
 mongoose.connect(DATABASE_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -42,13 +37,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 // app.use(sendMesssage);
-
 app.use(cookieParser());
+
 app.use(express.static('public'));
-app.use('/', require('./routes/tts.js'));
+app.use('/ditties', require('./routes/ditties.js'));
 
 app.use(errorLogger);
 app.use('*', error);
+app.use(errors());
 app.use(errorHandler);
 
 module.exports = app;
