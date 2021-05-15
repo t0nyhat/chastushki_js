@@ -15,7 +15,7 @@
 #### Backend развернут по IP- адресу [https://chastushki.tonyhat.site/api/speech](https://chastushki.tonyhat.site/api/speech)
 #### Фронт доступен по адресу [https://chastushki.tonyhat.site](https://chastushki.tonyhat.site)
 
-#### v2.1.1
+#### v2.1.2
 
   
 ## Функционал:
@@ -26,7 +26,8 @@ POST /api/speech
     "text": "Частушка",
     "voice": "alyss",
     "emotion": "good",
-    "speed": 1
+    "speed": 1,
+    "lang":ru-RU,
 }
 в ответ придет wav файл 
 ```
