@@ -23,6 +23,7 @@ mongoose.connect(DATABASE_URL, {
   useUnifiedTopology: true,
 });
 app.use(cors());
+app.options('*', cors());
 
 app.use(helmet());
 
