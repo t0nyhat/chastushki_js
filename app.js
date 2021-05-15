@@ -40,7 +40,7 @@ app.use(requestLogger);
 // app.use(sendMesssage);
 app.use(cookieParser());
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use('/ditties', require('./routes/ditties.js'));
 
 app.use(errorLogger);
