@@ -52,7 +52,7 @@
     "mongoose": "^5.12.10",
     "mongoose-validator": "^2.1.0",
     "node-jose": "^2.0.0",
-    "node-telegram-bot-api": "^0.53.0",
+    "node-telegram-bot-api": "^0.58.0",
     "superagent": "^6.1.0",
     "validator": "^13.6.0",
     "winston": "^3.3.3"
